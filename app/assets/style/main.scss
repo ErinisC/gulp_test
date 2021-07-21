@@ -6,7 +6,8 @@
   // }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, "Helvetica Neue", Arial, sans-serif;           
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, "Helvetica Neue", Arial, sans-serif;   
+    line-height: 1.5;        
   }
 
   img{
@@ -44,6 +45,18 @@
   .ml-6{
     margin-left: 48px;
   }
+  .pb-10{
+    padding-bottom: 80px;
+  }
+  .mr-0{
+    margin-right: 30px;
+  }
+
+  .subTitle{
+    font-size: $font-xl;
+    font-weight: 700;
+    text-align: center;
+  }
 
   .banner{
     background-image: url(../images/banner.png);
@@ -54,37 +67,178 @@
       align-items: flex-end;
 
       h3{
-        color: $main;
+        color: $danger;
         font-size: 36px;
         line-height: 1.5;
         font-weight: 600;
       }
       p{
-        color: $main;
+        color: $danger;
         font-size: 64px;
-        font-weight: 800;
+        font-weight: 700;
       }
     }
     
   }
 
   .service{
-    text-align: center;
-
-    color: $main ;
-    h2{
-      font-size: $font-xl;
-      
-    }
+    padding-top: 60px;
+    background-color: #AA06010D;
+    color: $danger;
     li{
       width: 25%;
       text-align: center;
+      img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px;
+      }
+      h4{
+        font-size: $font-m;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
       p{
         text-align: left;
+        color: #000;
       }
     }
   }
 
+  .series{
+    padding-top: 60px;
+    h2{
+      color: $danger;
+    }
+    
+    li{
+      .seriesPhoto{
+        width: 58%;
+      }
+      .seriesTitle{
+        width: 41%;
+        font-size: $font-xl;
+        align-items: center;
+        font-style: italic;
+        font-weight: 700;
+        color: $primary;
+        img{
+          width: 48px;
+          height: 48px;
+          margin-right: 8px;
+        }
+        span{
+          font-size: $font-xl;
+          color: $primary;
+          margin-right: 8px;
+        }
+      }
+    }
+    // 沒辦法使用 flex-end??
+    .sunglasses{
+      .seriesTitle{
+        justify-content: flex-end;    
+      }
+    }
+  }
+
+  .coBrand{
+    padding-top: 60px;
+    background-image: url(../images/bg.png) ;
+    .subTitle{
+      color: #fff;
+    }
+    ul{
+      font-size: $font-xxl;
+      text-align: center;
+      a{
+        text-decoration: none;
+        color: $primary;
+        font-weight: 700;
+      }
+      .coBrandItem{
+        width: 50%;
+        // background-image: url(../images/products-8.jpg);
+        position: relative;
+        img{
+          opacity: 0.5 ;
+        }
+        h3{
+          width: 400px;
+          z-index: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .recommend{
+    padding-top: 60px;
+    li{
+      border: 1px solid #DEE2E6;
+      width: 25%;
+      border-radius: 4px;
+      box-shadow: 0px 2px 6px;
+      img{
+        margin-bottom: 16px;
+      }
+      .comment{
+        padding:16px;
+        .name{
+          margin-bottom: 8px;
+        }
+        p{
+          margin-bottom: 76px;
+        }
+        span{
+          color: #707070;
+          font-size: 14px;
+        }
+      }
+        
+    }
+  }
+  
+  .contact{
+    padding-top: 60px;
+    background-color: #AA06010D;
+    .formWrap{
+      position: relative;
+      width: 66%;
+      margin: 0 auto;
+      p{
+        margin-bottom: 20px;
+      }
+      
+      input{
+        width: 100%;
+        margin: 4px 0 16px ;
+        padding: 1rem;
+        font-size: 16px;
+      }
+      textarea{
+        margin-top: 4px;
+        margin-bottom: 16px;
+        width: 100%;
+        padding: 1rem;
+        font-size: 16px;
+      }
+      .formBtn{
+        width: 50%;
+        margin-top: 60px;
+        background-color:$primary;
+        color: #fff;
+        border: none;
+        position: absolute;
+        left: 50%;
+        transform:translate(-50%)
+      }
+    } 
+  }
+  
 
 
 
@@ -93,9 +247,12 @@
 
   .header {
     background-color: $primary;
-    padding: 30px 88px;
     justify-content: space-between;
+    padding: 30px 88px;
     font-size: $font-s;
+    @include mobile(){
+      padding: 30px 39px;
+    }
   }
 
   .logo {
@@ -165,10 +322,6 @@
   /* layout css end */
 
   .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    display: flex;
     transition: all 0.5s;
     &:hover {
       width: 200px;
