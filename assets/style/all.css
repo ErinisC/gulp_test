@@ -50,7 +50,7 @@ table {
           box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5; }
 
 img {
@@ -59,8 +59,15 @@ img {
   height: auto; }
 
 .container {
-  width: 1110px;
-  margin: 0 auto; }
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px; }
+  @media (max-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (max-width: 375px) {
+    .container {
+      max-width: 375px; } }
 
 .d-flex {
   display: -webkit-box;
@@ -79,6 +86,12 @@ img {
 .mb-4 {
   margin-bottom: 32px; }
 
+.pr-4 {
+  padding-right: 32px; }
+
+.pl-4 {
+  padding-left: 32px; }
+
 .mb-5 {
   margin-bottom: 40px; }
 
@@ -91,21 +104,30 @@ img {
 .pb-10 {
   padding-bottom: 80px; }
 
-.mr-0 {
-  margin-right: 30px; }
+.mx-0 {
+  margin: 0 15px; }
 
 .subTitle {
   font-size: 48px;
   font-weight: 700;
   text-align: center; }
+  @media (max-width: 768px) {
+    .subTitle {
+      font-size: 32px;
+      margin-bottom: 32px; } }
+  @media (max-width: 375px) {
+    .subTitle {
+      margin-bottom: 20px;
+      font-size: 20px; } }
 
 .banner {
   background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
   height: 840px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .banner .container {
+  .banner .title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -113,34 +135,55 @@ img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
-    .banner .container h3 {
+    .banner .title span {
       color: #650300;
       font-size: 36px;
       line-height: 1.5;
       font-weight: 600; }
-    .banner .container p {
+      @media (max-width: 768px) {
+        .banner .title span {
+          font-size: 20px; } }
+    .banner .title h1 {
       color: #650300;
       font-size: 64px;
       font-weight: 700; }
+      @media (max-width: 768px) {
+        .banner .title h1 {
+          font-size: 48px; } }
 
 .service {
   padding-top: 60px;
   background-color: #AA06010D;
   color: #650300; }
-  .service li {
-    width: 25%;
-    text-align: center; }
-    .service li img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 16px; }
-    .service li h4 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px; }
-    .service li p {
-      text-align: left;
-      color: #000; }
+  @media (max-width: 768px) {
+    .service {
+      padding-top: 40px; } }
+  .service .serviceList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .service .serviceList li {
+      max-width: 25%;
+      text-align: center;
+      padding: 0 15px;
+      margin: 0 auto; }
+      @media (max-width: 768px) {
+        .service .serviceList li {
+          margin-bottom: 32px;
+          max-width: 50%; } }
+      @media (max-width: 375px) {
+        .service .serviceList li {
+          max-width: 100%; } }
+      .service .serviceList li img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px; }
+      .service .serviceList li h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px; }
+      .service .serviceList li p {
+        text-align: left;
+        color: #000; }
 
 .series {
   padding-top: 60px; }
@@ -199,23 +242,40 @@ img {
 
 .recommend {
   padding-top: 60px; }
-  .recommend li {
-    border: 1px solid #DEE2E6;
-    width: 25%;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 2px 6px;
-            box-shadow: 0px 2px 6px; }
-    .recommend li img {
-      margin-bottom: 16px; }
-    .recommend li .comment {
-      padding: 16px; }
-      .recommend li .comment .name {
-        margin-bottom: 8px; }
-      .recommend li .comment p {
-        margin-bottom: 76px; }
-      .recommend li .comment span {
-        color: #707070;
-        font-size: 14px; }
+  @media (max-width: 768px) {
+    .recommend {
+      padding-top: 40px;
+      padding-bottom: 24px; } }
+  .recommend .subTitle {
+    color: #650300; }
+  .recommend ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .recommend ul li {
+      border: 1px solid #DEE2E6;
+      width: 22%;
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 2px 6px;
+              box-shadow: 0px 2px 6px; }
+      @media (max-width: 768px) {
+        .recommend ul li {
+          width: 45%;
+          margin-bottom: 32px; } }
+      @media (max-width: 375px) {
+        .recommend ul li {
+          width: 100%;
+          margin-bottom: 16px; } }
+      .recommend ul li img {
+        margin-bottom: 16px; }
+      .recommend ul li .comment {
+        padding: 16px; }
+        .recommend ul li .comment .name {
+          margin-bottom: 8px; }
+        .recommend ul li .comment p {
+          margin-bottom: 76px; }
+        .recommend ul li .comment span {
+          color: #707070;
+          font-size: 14px; }
 
 .contact {
   padding-top: 60px;
@@ -251,38 +311,42 @@ img {
       cursor: pointer; }
 
 /* layout css start */
-.header {
+nav {
   background-color: #AA0601;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 88px;
   font-size: 20px; }
-  @media (max-width: 768px) {
-    .header {
-      padding: 30px 39px; } }
-
-.logo {
-  background-image: url(/assets/images/logo.png);
-  width: 80px;
-  height: 48.57px;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: wrap;
-  display: block; }
-
-.navbar {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: #fff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .navbar li {
-    margin-left: 64px; }
-    .navbar li a {
+  nav .logo {
+    background-image: url(../images/logo.png);
+    width: 80px;
+    height: 48.57px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: wrap;
+    display: block; }
+    @media (max-width: 375px) {
+      nav .logo {
+        width: 100%; } }
+  nav ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    nav ul a {
+      padding: 8px 0;
       text-decoration: none;
       color: #fff; }
+  @media (max-width: 768px) {
+    nav {
+      padding: 30px 39px; } }
+  @media (max-width: 375px) {
+    nav a {
+      width: 50%; } }
 
 .footer {
   padding: 44px 0 40px 0;
