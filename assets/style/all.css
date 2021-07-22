@@ -247,7 +247,8 @@ img {
       left: 50%;
       -webkit-transform: translate(-50%);
           -ms-transform: translate(-50%);
-              transform: translate(-50%); }
+              transform: translate(-50%);
+      cursor: pointer; }
 
 /* layout css start */
 .header {
@@ -304,10 +305,11 @@ img {
     margin-left: 32px; }
   .footer .contact {
     font-size: 36px; }
-    .footer .contact .phone {
-      line-height: 54px; }
-      .footer .contact .phone img {
-        margin-right: 22px; }
+    .footer .contact a {
+      color: #fff;
+      text-decoration: none; }
+    .footer .contact .phone img {
+      margin-right: 22px; }
     .footer .contact .email img {
       margin-right: 20px; }
   .footer .right {
