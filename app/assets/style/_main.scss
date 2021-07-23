@@ -86,6 +86,9 @@
     background-repeat: no-repeat;
     height: 840px;
     align-items: center;
+    @include pad(){
+      background-position:center;
+    }
     .title{
       flex-direction: column;
       align-items: flex-end;
@@ -116,8 +119,15 @@
     @include pad(){
       padding-top: 40px;
     }
+    @include mobile(){
+      padding-top: 32px;
+    }
     .serviceList{
       flex-wrap: wrap;
+      padding-bottom: 80px;
+      @include pad(){
+        padding-bottom: 24px;
+      }
       li{
         max-width: 25%;
         text-align: center;
@@ -126,6 +136,7 @@
         @include pad(){
         margin-bottom: 32px;
         max-width: 50%;
+        padding: 0 52px;
         }
         @include mobile(){
         max-width: 100%;
@@ -154,9 +165,22 @@
     h2{
       color: $danger;
     }
-    li{
+    
+    ul{
+      .sunglassesM {
+        display: none;
+        @include pad(){
+          display: block;
+        }
+      }
+      .sunglassesD{
+        @include pad(){
+          display: none;
+        }
+      }
       .seriesPhoto{
         width: 58%;
+        margin-right: 30px;
       }
       .seriesTitle{
         width: 41%;
@@ -175,14 +199,7 @@
           color: $primary;
           margin-right: 8px;
         }
-      }
-    }
-    // 沒辦法使用 flex-end??
-    .sunglasses{
-      .seriesTitle{
-        justify-content: flex-end;    
-      }
-    }
+      } 
   }
 
   .coBrand{
@@ -303,7 +320,7 @@
   }
   
 
-/* layout css start */
+
 
   nav {
     background-color: $primary;
@@ -386,13 +403,5 @@
         color: #fff;
       }
     }
-  }
-  /* layout css end */
-
-  .box {
-    transition: all 0.5s;
-    &:hover {
-      width: 200px;
-      background-color: $primary;
-    }
-  }
+  
+  
