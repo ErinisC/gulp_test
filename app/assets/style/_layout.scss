@@ -1,0 +1,86 @@
+ 
+//layout css start
+
+nav {
+    background-color: $primary;
+    justify-content: space-between;
+    padding: 30px 88px;
+    font-size: $font-s;
+    .logo {
+      background-image: url(../images/logo.png);
+      width: 80px;
+      height: 48.57px;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: wrap;
+      display: block;
+      @include mobile(){
+        width: 100%;
+      }
+    }
+    ul{
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      a{
+        padding: 8px 0;
+        text-decoration: none;
+        color:#fff;
+        }        
+    }
+    @include pad(){
+      padding: 30px 39px;
+    }
+    @include mobile(){
+      a{
+        width: 50%;
+      }
+    }
+    
+  }
+
+  
+  
+  .footer {
+    padding: 44px 0 40px 0;
+    background-color: $primary;
+    color:#fff;
+    .footerNav{
+      margin-bottom: 36px;
+      justify-content: space-between;
+      align-items:center;
+      font-size: $font-s;
+    }
+    .footerItem a{
+      text-decoration: none;
+      color: #fff;
+      margin-right: $mr-6;
+    }
+    .socialMedia {
+      li{
+        margin-left: 32px;
+      }
+    }
+    .contact{
+      font-size: 36px;
+      a{
+        color:#fff;
+        text-decoration: none;
+      }
+      .phone img{
+        margin-right: 22px;
+      }
+      .email img{
+        margin-right: 20px;
+      }
+    }
+
+    .right{
+      justify-content: space-between;
+      a{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+  
