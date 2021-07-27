@@ -313,33 +313,40 @@ img {
           color: #707070;
           font-size: 14px; }
 
-.contact {
+.contactUs {
   padding-top: 60px;
   background-color: #AA06010D; }
-  .contact .formWrap {
+  @media (max-width: 768px) {
+    .contactUs {
+      padding-top: 40px; } }
+  .contactUs .formWrap {
     position: relative;
     width: 66%;
-    margin: 0 auto; }
-    .contact .formWrap p {
+    margin: 0 auto;
+    padding-bottom: 56px; }
+    .contactUs .formWrap p {
       margin-bottom: 20px; }
-    .contact .formWrap input {
+    .contactUs .formWrap input {
       width: 100%;
       margin: 4px 0 16px;
       padding: 1rem;
       font-size: 16px; }
       @media (max-width: 768px) {
-        .contact .formWrap input {
-          font-size: 14px; } }
-    .contact .formWrap textarea {
+        .contactUs .formWrap input {
+          font-size: 14px;
+          margin-bottom: 8px;
+          padding: .5rem; } }
+    .contactUs .formWrap textarea {
       margin-top: 4px;
       margin-bottom: 16px;
       width: 100%;
       padding: 1rem;
       font-size: 16px; }
       @media (max-width: 768px) {
-        .contact .formWrap textarea {
-          font-size: 14px; } }
-    .contact .formWrap .formBtn {
+        .contactUs .formWrap textarea {
+          font-size: 14px;
+          margin-bottom: 8px; } }
+    .contactUs .formWrap .formBtn {
       width: 50%;
       margin-top: 60px;
       background-color: #AA0601;
@@ -351,8 +358,11 @@ img {
           -ms-transform: translate(-50%);
               transform: translate(-50%);
       cursor: pointer; }
-      .contact .formWrap .formBtn:hover {
+      .contactUs .formWrap .formBtn:hover {
         background-color: #650300; }
+      @media (max-width: 768px) {
+        .contactUs .formWrap .formBtn {
+          padding: 10px 77px; } }
 
 nav {
   background-color: #AA0601;
@@ -395,6 +405,9 @@ nav {
   padding: 44px 0 40px 0;
   background-color: #AA0601;
   color: #fff; }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 38px 0 32px 0; } }
   .footer .footerNav {
     margin-bottom: 36px;
     -webkit-box-pack: justify;
@@ -404,21 +417,50 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     font-size: 20px; }
+    @media (max-width: 768px) {
+      .footer .footerNav {
+        font-size: 16px;
+        margin-bottom: 18px; } }
   .footer .footerItem a {
     text-decoration: none;
     color: #fff;
     margin-right: 48px; }
+    @media (max-width: 768px) {
+      .footer .footerItem a {
+        margin-right: 40px; } }
   .footer .socialMedia li {
+    width: 48px;
+    height: 48px;
     margin-left: 32px; }
+    @media (max-width: 768px) {
+      .footer .socialMedia li {
+        width: 24px;
+        height: 24px;
+        margin-left: 24px; } }
   .footer .contact {
     font-size: 36px; }
+    @media (max-width: 768px) {
+      .footer .contact {
+        font-size: 20px; } }
     .footer .contact a {
       color: #fff;
       text-decoration: none; }
     .footer .contact .phone img {
-      margin-right: 22px; }
+      margin-right: 22px;
+      width: 48px;
+      height: 48px; }
+      @media (max-width: 768px) {
+        .footer .contact .phone img {
+          width: 24px;
+          height: 24px; } }
     .footer .contact .email img {
-      margin-right: 20px; }
+      margin-right: 20px;
+      width: 48px;
+      height: 48px; }
+      @media (max-width: 768px) {
+        .footer .contact .email img {
+          width: 24px;
+          height: 24px; } }
   .footer .right {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
