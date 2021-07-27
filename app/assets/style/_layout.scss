@@ -45,33 +45,66 @@ nav {
     padding: 44px 0 40px 0;
     background-color: $primary;
     color:#fff;
+    @include pad(){
+      padding: 38px 0 32px 0;
+    }
     .footerNav{
       margin-bottom: 36px;
       justify-content: space-between;
       align-items:center;
       font-size: $font-s;
+      @include pad(){
+        font-size: $font-xs;
+        margin-bottom: 18px;
+      }
     }
     .footerItem a{
       text-decoration: none;
       color: #fff;
       margin-right: $mr-6;
+      @include pad(){
+        margin-right: $mr-5;
+      }
     }
-    .socialMedia {
+    .socialMedia {  
       li{
+        width: 48px;
+        height: 48px;
         margin-left: 32px;
+        @include pad(){
+          width: 24px;
+          height: 24px;
+          margin-left: 24px;
+        }
       }
     }
     .contact{
       font-size: 36px;
+      @include pad(){
+      font-size: $font-s;      }
       a{
         color:#fff;
         text-decoration: none;
       }
       .phone img{
         margin-right: 22px;
+        width: 48px;
+        height: 48px;
+        @include pad(){
+          width: 24px;
+          height: 24px;
+        }
+        
       }
       .email img{
         margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        @include pad(){
+          width: 24px;
+          height: 24px;
+          // margin-bottom: 20px;
+        }
       }
     }
 

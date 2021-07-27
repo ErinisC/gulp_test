@@ -297,13 +297,17 @@
     
   }
   
-  .contact{
+  .contactUs{
     padding-top: 60px;
     background-color: #AA06010D;
+    @include pad(){
+      padding-top: 40px;
+    }
     .formWrap{
       position: relative;
       width: 66%;
       margin: 0 auto;
+      padding-bottom: 56px;
       p{
         margin-bottom: 20px;
       }
@@ -314,6 +318,8 @@
         font-size: 16px;
         @include pad(){
           font-size: 14px;
+          margin-bottom: 8px;
+          padding: .5rem;
         }
       }
       textarea{
@@ -324,6 +330,7 @@
         font-size: 16px;
         @include pad(){
           font-size: 14px;
+          margin-bottom: 8px;
         }
       }
       .formBtn{
@@ -338,6 +345,9 @@
         cursor: pointer;
         &:hover{
           background-color: $danger;
+        }
+        @include pad(){
+          padding: 10px 77px;
         }
       }
     } 
